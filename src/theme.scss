@@ -3,10 +3,21 @@
 
 @include mat-core();
 
-$brief-app-primary: mat-palette($mat-orange, 900);
+
+// Define custom theme
+$brief-app-primary: mat-palette($mat-blue, 900);
 $brief-app-accent: mat-palette($mat-yellow, 700);
 $brief-app-warn: mat-palette($mat-red);
 
 $brief-app-theme: mat-light-theme($brief-app-primary, $brief-app-accent, $brief-app-warn);
 
 @include angular-material-theme($brief-app-theme);
+
+
+// Define custom typography
+
+$brief-app-typography: mat-typography-config(
+    $font-family: '"Work Sans", "Helvetica Neue", sans-serif'
+);
+
+@include angular-material-typography($brief-app-typography);
