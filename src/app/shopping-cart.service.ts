@@ -23,8 +23,8 @@ export class ShoppingCartService {
     if (cartId) return cartId;
     
     let result = await this.create();
-    localStorage.setItem('cartId', result.key);
-    return result.key;
+    // localStorage.setItem('cartId', result.key);
+    // return result.key;
     
   }
 
